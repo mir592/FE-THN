@@ -1,42 +1,39 @@
-# fe-hiring-test
+# Frontend Developer Test
 
-This template should help get you started developing with Vue 3 in Vite.
+One of our clients has asked us for help with the development of a web application that manages the process of selecting a room in their hotel. It already has an initial development but at THN we think it can be improved.
 
-## Recommended IDE Setup
+Our client has told us that the project must meet the following objectives:
+- Checkin and checkout must show the current date and tomorrow's date.
+- When the "Modify" button is clicked, the necessary information must be updated in the "Summary" section.
+- When you select one of the 3 hotels in the list, the information in the "Summary" section must be updated.
+- When the "Save" button is clicked, all selected information should be saved locally. This means that when you refresh the browser tab, the current data will be kept.
+- When the `promo_code` parameter is passed by URL, it should apply a discount on the final price. For example, `dummyurl.com?promo_code=10`, will apply a 10% discount both in the Summary section and in each block of the hotel.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+Nice to have:
+- The web application must be adapted to mobile devices.
+- Maintaining the current development framework (Vue)
 
-## Type Support for `.vue` Imports in TS
+## Important:
+There is no limit to the things you can change. Not only add missing functionality but also improve the use of the framework, project architecture, bug fixes, etc... so feel free. The aim is that you should deliver the project as you would deliver it.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+---
 
 ## Project Setup
 
 ```sh
-npm install
+yarn install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+yarn run dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-npm run build
+yarn run build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
