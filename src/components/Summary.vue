@@ -35,25 +35,25 @@ export default defineComponent({
 
 <template>
   <div class="p-4 border border-gray-light">
-    <h2 class="mb-8 text-xl font-bold">Reservation summary</h2>
-    <h3 class="mb-4 font-bold">{{ data.roomName }}</h3>
+    <h2 class="mb-8 text-xl"><strong>Reservation summary</strong></h2>
+    <h3 class="mb-4"><strong>{{ data.roomName }}</strong></h3>
     <div class="mb-4 space-y-8 text-sm">
       <div class="flex space-x-12">
         <div>
-          <p class="font-bold">Check in</p>
+          <p><strong>Check in</strong></p>
           <p>From 15.00h</p>
         </div>
         <div>
-          <p class="font-bold">Check out</p>
+          <p><strong>Check out</strong></p>
           <p>Before 12.00h</p>
         </div>
       </div>
       <div>
-        <p class="font-bold">Reservation date</p>
+        <p><strong>Reservation date</strong></p>
         <p>From {{ data.checkinDate }} to {{ data.checkoutDate }}</p>
       </div>
       <div>
-        <p class="font-bold">People</p>
+        <p><strong>People</strong></p>
         <p>{{ data.adults }} Adults</p>
       </div>
     </div>

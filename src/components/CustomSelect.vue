@@ -39,7 +39,9 @@ export default defineComponent({
   @apply bg-gray;
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
-:slotted(select) {
+</style>
+<style>
+select {
   appearance: none;
   background-color: transparent;
   border: none;

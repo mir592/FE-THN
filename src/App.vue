@@ -13,8 +13,8 @@ export default defineComponent({
     Summary,
   },
   setup() {
-    const startDate = ref();
-    const endDate = ref();
+    const sd = ref();
+    const ed = ref();
     const adults = ref('');
     const children = ref('');
     const summary = ref(null);
@@ -26,15 +26,16 @@ export default defineComponent({
     const modifyReservationHandler = () => {
       if (summary.value) {
         summary.value.updateReservationData({
-          startDate: new Intl.DateTimeFormat('en-US').format(startDate.value),
-          endDate: new Intl.DateTimeFormat('en-US').format(endDate.value),
+          startDate: new Intl.DateTimeFormat('en-US').format(sd.value),
+          endDate: new Intl.DateTimeFormat('en-US').format(ed.value),
           adults: adults.value
         })
+        alert('Summary Updated');
       }
     };
     return {
-      startDate,
-      endDate,
+      sd,
+      ed,
       adults,
       children,
       selectRoom,
@@ -65,10 +66,10 @@ export default defineComponent({
     <div class="flex justify-center px-8 py-4 bg-primary bg-opacity-40">
       <div class="flex items-start space-x-4">
         <div class="calendar-wrapper">
-          <Datepicker v-model="startDate" class="calendar-input" />
+          <Datepicker v-model="sd" class="calendar-input" />
         </div>
         <div class="calendar-wrapper">
-          <Datepicker v-model="endDate" class="calendar-input" />
+          <Datepicker v-model="ed" class="calendar-input" />
         </div>
         <CustomSelect>
           <select v-model="adults">
@@ -101,13 +102,13 @@ export default defineComponent({
     <p class="mb-4">Plan your perfect stay at your hotel</p>
     <img src="./assets/img/path.png" alt="Path" width="400">
   </div>
-  <div class="flex px-8 mb-16 space-x-8">
-    <div class="w-2/3">
+  <div class="px-8 mb-16 inline-block">
+    <div class="float-left w-2/3">
       <Rooms
         :select-room="selectRoom"
       />
     </div>
-    <div class="w-1/3">
+    <div class="w-1/3 float-right pl-4">
       <Summary ref="summary" />
     </div>
   </div>

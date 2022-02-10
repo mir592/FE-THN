@@ -61,7 +61,7 @@ export default defineComponent({
           <img :src="room.img" alt="Mini Dreamy Room" class="object-cover w-full h-full">
         </div>
         <div class="flex flex-col w-2/3 text-sm">
-          <p class="mb-2 text-base font-bold font-display">{{ room.name }}</p>
+          <p class="mb-2 text-base font-display"><strong>{{ room.name }}</strong></p>
           <p class="flex-1">{{ room.description }}</p>
           <p class="mb-6">Size: {{ room.size }}</p>
           <div class="flex items-baseline space-x-16">
@@ -70,7 +70,7 @@ export default defineComponent({
               <p>Beds: {{ room.beds }}</p>
             </div>
             <div class="flex-1">People: {{ room.people }}</div>
-            <div class="text-xl font-bold">{{ room.amount }}</div>
+            <div class="text-xl"><strong>{{ room.amount }}</strong></div>
           </div>
         </div>
       </div>
