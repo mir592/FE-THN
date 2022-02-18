@@ -1,9 +1,8 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
 import img1 from '../assets/img/room_1.png';
-import img2 from '../assets/img/room_2.png';
 import img3 from '../assets/img/room_3.png';
-
+import { defineComponent } from 'vue';
+import img2 from '../assets/img/room_2.png';
 export default defineComponent({
   props: {
     selectRoom: {
