@@ -11,7 +11,7 @@ export default defineComponent({
     },
   },
   setup () {
-    const roomsData = [
+    const my_rooms = [
       {
         name: 'Mini Dreamy Room',
         description: 'Generous and comfortable these modern furnished rooms offer two queen-size beds and are on the first floor.',
@@ -42,7 +42,7 @@ export default defineComponent({
     ]
 
     return {
-      roomsData,
+      my_rooms,
     };
   }
 })
@@ -50,30 +50,30 @@ export default defineComponent({
 <template>
   <div class="space-y-4">
     <div 
-      v-for="room in roomsData"
+      v-for="n in my_rooms"
       class="p-4 transition-all duration-300 border cursor-pointer border-gray-light hover:bg-gray-light hover:bg-opacity-20 hover:shadow-sm"
-      :key="room.name"
-      @click="selectRoom(room)"
+      :key="n.name"
+      @click="selectRoom(n)"
     >
       <div class="flex space-x-4">
         <div class="w-1/3">
-          <img :src="room.img" alt="Mini Dreamy Room" class="object-cover w-full h-full">
+          <img :src="n.img" alt="Mini Dreamy Room" class="object-cover w-full h-full">
         </div>
         <div class="flex flex-col w-2/3 text-sm">
-          <p class="mb-2 text-base font-display"><strong>{{ room.name }}</strong></p>
-          <p class="flex-1">{{ room.description }}</p>
-          <p class="mb-6">Size: {{ room.size }}</p>
+          <p class="mb-2 text-base font-display"><strong>{{ n.name ? n.name : undefined }}</strong></p>
+          <p class="flex-1">{{ n.description }}</p>
+          <p class="mb-6">Size: {{ n.size }}</p>
           <div class="flex items-baseline space-x-16">
             <div>
               <img src="../assets/img/double-bed.svg" class="w-8 mb-1">
-              <p>Beds: {{ room.beds }}</p>
+              <p>Beds: {{ n.beds }}</p>
             </div>
-            <div class="flex-1">People: {{ room.people }}</div>
-            <div class="text-xl"><strong>{{ room.amount }}</strong></div>
+              <div class="flex-1">People: {{ n.people }}</div>
+          <div class="text-xl"><strong>{{ n.amount }}</strong></div>
+        </div>
           </div>
         </div>
-      </div>
-    </div>
+  </div>
   </div>
 </template>
 <style scoped>
