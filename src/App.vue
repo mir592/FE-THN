@@ -102,13 +102,13 @@ export default defineComponent({
     <p class="mb-4">Plan your perfect stay at your hotel</p>
     <img src="./assets/img/path.png" alt="Path" width="400">
   </div>
-  <div class="px-8 mb-16 inline-block">
+  <div class="inline-block px-8 mb-16">
     <div class="float-left w-2/3">
       <Rooms
         :select-room="selectRoom"
       />
     </div>
-    <div class="w-1/3 float-right pl-4">
+    <div class="float-right w-1/3 pl-4">
       <Summary ref="summary" />
     </div>
   </div>
@@ -131,7 +131,7 @@ export default defineComponent({
         </div>
       </div>
     </div>
-
+    div >
   </div>
 </template>
 <style scoped>
