@@ -63,14 +63,14 @@ export default defineComponent({
           <p class="mb-2 text-base font-display"><strong>{{ n.name ? n.name : undefined }}</strong></p>
           <p class="flex-1">{{ n.description }}</p>
           <p class="mb-6">Size: {{ n.size }}</p>
-          <div class="flex items-baseline space-x-16">
+          <div class="flex items-baseline space-x-2 md:space-x-16">
             <div>
               <img src="../assets/img/double-bed.svg" class="w-8 mb-1">
               <p>Beds: {{ n.beds }}</p>
             </div>
-              <div class="flex-1">People: {{ n.people }}</div>
-          <div class="text-xl"><strong>{{ n.amount }}</strong></div>
-        </div>
+            <div class="flex-1">People: {{ n.people }}</div>
+            <div class="text-l md:text-xl"><strong>{{ n.amount }}</strong></div>
+          </div>
           </div>
         </div>
   </div>
